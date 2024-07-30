@@ -1,41 +1,36 @@
 import React from "react";
-import { useState,useRef,useLayoutEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 import gsap from "gsap";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const navbarRef = useRef(null);
-  const navbarRef2 = useRef(null);
-  useLayoutEffect(() => {
-    // GSAP animation for navbar
+  useEffect(() => {
+    // GSAP animation for navbar (desktop view)
     if (navbarRef.current) {
-      const navbarElements = navbarRef.current.querySelectorAll(".navbar, .navbar ul li") 
+      const navbarElements = navbarRef.current.querySelectorAll(
+        "img, .navbar ul li" 
+      );
       gsap.fromTo(
-        [navbarElements],
-        { y:-100,opacity: 0 }, // Initial state
+        navbarElements,
+        { y: -100, opacity: 0 },
         {
-          y:0,
+          y: 0,
           opacity: 1,
-          duration: 0.5, // Duration of the animation
-          stagger: 0.1, // Stagger the animation
-          ease: "power2.out" // Easing function
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power2.out",
         }
       );
-      gsap.fromTo(navbarRef2.current,{
-        y:-100,
-        opacity:0
-      },{
-        y:0,
-        opacity:1,
-        duration:0.5
-      })
     }
   }, []);
 
+
+
   return (
     <div
-    ref={navbarRef}
+      ref={navbarRef}
       className=" navbar w-full flex py-5 justify-between items-center  "
     >
       <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
@@ -51,7 +46,10 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div ref={navbarRef2} className="nav-mobile  sm:hidden flex flex-1 justify-end items-center w-full text-white  overflow-hidden z-[101]  ">
+      <div
+      
+        className="navbar-mob  sm:hidden flex flex-1 justify-end items-center w-full text-white  overflow-hidden z-[101]  "
+      >
         <img
           src={toggle ? close : menu}
           alt="menu"
