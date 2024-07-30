@@ -1,12 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef ,useEffect} from "react";
 import styles from "../style";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const Button = ({ styles }) => {
   const buttonRef = useRef(null);
-  // Initialize GSAP animation and ScrollTrigger
-  const initializeGsap = () => {
+
+  useEffect(() => {
+    // Initialize GSAP animation and ScrollTrigger
     if (buttonRef.current) {
       gsap.fromTo(
         buttonRef.current,
@@ -19,17 +20,16 @@ const Button = ({ styles }) => {
           scrollTrigger: {
             trigger: buttonRef.current,
             start: "top 85%", // When the top of the trigger element reaches 85% of the viewport height
-            end: "top 95%", // When the top of the trigger element reaches 100% of the viewport height
+            end: "top 95%", // When the top of the trigger element reaches 95% of the viewport height
             scrub: 3, // Smoothly syncs the animation with the scroll position
           },
         }
       );
     }
-  };
+  }, []); // Empty dependency array ensures this runs once on mount
 
-  // Ensure GSAP initialization runs only once
 
-  initializeGsap();
+
 
   return (
     <button
