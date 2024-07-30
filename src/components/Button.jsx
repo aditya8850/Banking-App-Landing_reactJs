@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Button = ({ styles }) => {
   const buttonRef = useRef(null);
   // Initialize GSAP animation and ScrollTrigger
-   const  initializeGsap = () => {
+  const initializeGsap = () => {
     if (buttonRef.current) {
       gsap.fromTo(
         buttonRef.current,
