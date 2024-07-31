@@ -1,9 +1,9 @@
 import React, { useRef ,useEffect} from "react";
-import styles from "../style";
+import styles from "../style.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-const Button = ({ styles }) => {
+const Button = ({ styles ,text }) => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Button = ({ styles }) => {
       id="button-gsap"
       className={` py-4 px-6 bg-blue-gradient font-poppins text-primary outline-none font-medium text-[1.1rem] ${styles} rounded`}
     >
-      Get Started{" "}
+      {text}{" "}
     </button>
   );
 };

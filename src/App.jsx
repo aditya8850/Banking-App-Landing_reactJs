@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./style";
+import styles from "./style.js";
 import {
   Navbar,
   Billing,
@@ -34,6 +34,8 @@ const App = () => (
         <CardDeal />
         <Testimonials />
         <Clients />
+        <CTA />
+        <Footer />
       </div>
     </div>
   </>

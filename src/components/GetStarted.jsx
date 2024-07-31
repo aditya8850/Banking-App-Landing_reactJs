@@ -1,6 +1,6 @@
 import React from 'react'
 import { arrowUp } from '../assets'
-import styles from '../style'
+import styles from '../style.js'
 
 const GetStarted = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { stats } from "../constants";
-import styles from "../style";
+import styles from "../style.js";
 const Stats = () => (
   <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mt-7 mb-8 w-[100%]`}>
     {stats.map((stat) => {

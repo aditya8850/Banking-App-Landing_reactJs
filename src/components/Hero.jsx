@@ -1,7 +1,7 @@
 import React from "react";
 import { discount, robot } from "../assets";
 import { GetStarted } from "../components/index";
-import styles from "../style";
+import styles from "../style.js";
 const Hero = () => (
   <section
     id="home"

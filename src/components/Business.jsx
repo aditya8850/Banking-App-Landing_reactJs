@@ -1,6 +1,6 @@
 import React from "react";
 import { features } from "../constants/";
-import styles, { layout } from "../style";
+import styles, { layout } from "../style.js";
 import Button from "./Button";
 const FeatureCard = ({ icon, title, content, index }) => (
   <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length-1 ? 'mb-6':'mb-0'} feature-card`}>
@@ -24,13 +24,13 @@ const Business = () => (
         You do the business,
         <br className="sm:block hidden" /> we'll handle the money.
       </h2>
-      <p className="max-w-[29rem] text-white">
+      <p className="max-w-[29rem]font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] ">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias rem
         laudantium quaerat saepe excepturi qui illum quos atque quibusdam.
         Blanditiis illo sequi distinctio minus earum quae, alias id omnis
         quibusdam.
       </p>
-      <Button styles="mt-10" />
+      <Button styles="mt-10" text='Get Started.' />
     </div>
     <div className={`${layout.sectionImg} flex-col`}>
       {features.map((feature, index) => (
