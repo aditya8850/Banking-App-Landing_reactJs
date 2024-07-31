@@ -3,7 +3,7 @@ import { features } from "../constants/";
 import styles, { layout } from "../style.js";
 import Button from "./Button";
 const FeatureCard = ({ icon, title, content, index }) => (
-  <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length-1 ? 'mb-6':'mb-0'} feature-card`}>
+  <div className={`flex flex-row  rounded-[20px] ${index !== features.length-1 ? 'mb-6':'mb-0'} feature-card`}>
     <div className={`w-[4rem] h-[4rem] rounded-full ${styles.flexCenter} bg-dimBlue`}>
       <img src={icon} alt="icon" className="w-[50%] h-[50%] object-contain" />
     </div>
@@ -18,7 +18,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
   </div>
 );
 const Business = () => (
-  <section id="features" className={`${layout.section}  xl:px-0 sm:px-16 px-6`}>
+  <section id="features" className={`${layout.section}  xl:px-0 sm:px-16 `}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
         You do the business,

@@ -8,7 +8,7 @@ const Hero = () => (
     className={`flex md:flex-row flex-col ${styles.paddingY} md:py-5  width-{100vw} `}
   >
     <div
-      className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
+      className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 `}
     >
       <div className="flex flex-row items-center py-[6px] pr-4  justify-center bg-discount-gradient rounded-[10px]   ">
         <img
